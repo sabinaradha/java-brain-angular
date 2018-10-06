@@ -1,0 +1,5 @@
+{
+    "/api/customersinfoserver/getdata/": "/customersInfoSource",
+    "/api/personList/getdata/":"/personList"
+    
+}

@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently --kill-others \"npm run server\" \"npm run update:watch\"",
+    "server": "ng serve --progress false --proxy-config proxy.config.json",
+    "mock": "json-server --watch data/my-database.js --routes data/routes.json",
+    "update:watch": "onchange \"data/**/*.json\" -i -- npm run mock",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -43,6 +46,9 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.1"
+    "typescript": "~3.1.1",
+    "json-server": "^0.9.6",
+    "concurrently": "^3.4.0",
+    "onchange": "^3.2.1"
   }
 }

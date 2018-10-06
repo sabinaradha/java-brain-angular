@@ -1,0 +1,20 @@
+.main {
+    border: 1px solid;
+    padding: 10px;
+}
+.header-h1 {
+    color :cornflowerblue;
+}
+
+.header-h3 {
+    
+    font-style: italic;
+}
+
+.address {
+    color: blue;
+}
+.phone {
+    border-left: 1px solid;
+    padding: 5px;
+}
