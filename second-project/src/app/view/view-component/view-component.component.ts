@@ -21,7 +21,7 @@ export class ViewComponentComponent implements OnInit {
     this.http.get('https://api.github.com/users/'+this.userName)
     .subscribe((res)=> {      
       this.response = res;
-      console.log(this.response);
+      // console.log(this.response);
     });
   }
 
